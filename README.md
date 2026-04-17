@@ -45,14 +45,15 @@ Yappy is a modern, lightweight task management web app built using JavaScript. I
 ### Landing Page
 ![Home](assets/frontpage1.png)
 
+### Login System
+![Login](assets/login1.png)
+
 ### Dashboard
 ![Dashboard](assets/home.png)
 
 ### Create Task
 ![Create](assets/todo.png)
 
-### Login System
-![Login](assets/login1.png)
 
 ---
 
