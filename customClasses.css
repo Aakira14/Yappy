@@ -1,0 +1,257 @@
+.buttonSelected {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.95), rgba(124, 58, 237, 0.95));
+    border-color: rgba(168, 85, 247, 0.75);
+    color: var(--text);
+    box-shadow: 0 16px 40px rgba(124, 58, 237, 0.22);
+}
+
+.taskElement {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    transition: transform 160ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    background: linear-gradient(180deg, var(--surface-0), rgba(255, 255, 255, 0.015));
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 100%;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    animation: cardIn 260ms cubic-bezier(.2,.9,.25,1) both;
+    animation-delay: calc(var(--i, 0) * 30ms);
+    .taskButton {
+        display: flex;
+        align-items: baseline;
+        border: 0px;
+        margin: 0px;
+        border-radius: 7px;
+        width: 100%;
+        text-align: left;
+        flex-wrap: wrap;
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+        padding: 10px 12px;
+        h2 {
+            padding-left: 5px;
+            padding-right: 5px;
+            font-size: 1.05rem;
+            font-weight: 750;
+        }
+        p {
+            opacity: 0.8;
+            padding-bottom: 2px;
+        }
+    }
+}
+
+.taskElement:hover {
+    transform: translateY(-1px);
+    border-color: rgba(168, 85, 247, 0.45);
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.45);
+}
+
+.removeButton {
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.95), rgba(236, 72, 153, 0.85));
+    display: flex;
+    padding: 6px;
+    color: var(--text);
+    height: fit-content;
+    margin: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(244, 63, 94, 0.35);
+    box-shadow: 0 14px 35px rgba(244, 63, 94, 0.14);
+    transition: transform 140ms ease, box-shadow 180ms ease, background-color 180ms ease, filter 180ms ease;
+    img {
+        width: 25px;
+        height: 25px;
+        filter: brightness(0) invert(1);
+        transition: transform 180ms ease, filter 180ms ease;
+    }
+}
+.removeButton:hover {
+    filter: saturate(1.05);
+    transform: translateY(-1px) rotate(-2deg);
+    box-shadow: 0 18px 46px rgba(244, 63, 94, 0.18);
+    img {
+        transform: rotate(12deg) scale(1.03);
+    }
+}
+.removeButton:active {
+    transform: translateY(0px) scale(0.98);
+}
+
+#filtersContainer > button {
+    border: 0 solid;
+    border-radius: 0px;
+    color: rgba(245, 243, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.02);
+    border-top: 1px solid rgba(168, 85, 247, 0.45);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.45);
+    border-left: 1px solid rgba(168, 85, 247, 0.45);
+}
+#filtersContainer > .buttonSelected {
+    color: var(--text);
+}
+#filtersContainer > button:hover {
+    color: var(--text);
+}
+#filtersContainer > button:first-child {
+    border-radius: 8px 0px 0px 8px;
+    border-left: 1px solid rgba(168, 85, 247, 0.45);
+
+}
+#filtersContainer > button:last-child {
+    border-radius: 0px 8px 8px 0px;
+    border-right: 1px solid rgba(168, 85, 247, 0.45);
+}
+
+#filtersContainer {
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid rgba(245, 243, 255, 0.10);
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.30);
+}
+
+#Popup_Background {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    transition-duration: 200ms;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    animation: overlayIn 200ms ease-out both;
+
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#Popup {
+    transition-duration: 200ms;
+
+    width: auto;
+    height: auto;
+    position: relative;
+
+    border: 1px solid rgba(168, 85, 247, 0.65);
+    background: linear-gradient(180deg, var(--surface-1), rgba(255, 255, 255, 0.02));
+    border-radius: 8px;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    padding: 10px 12px;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    animation: popupIn 220ms cubic-bezier(.2,.9,.25,1) both;
+
+    display: flex;
+    flex-direction: column;
+    min-width: min(560px, 92vw);
+}
+#Popup_Title_Layer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 12px;
+}
+.Popup_Description {
+    color: var(--text-muted);
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+#createTaskButton {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#Popup input {
+    width: 100%;
+}
+
+.taskDone {
+    background: linear-gradient(180deg, rgba(168, 85, 247, 0.10), rgba(255, 255, 255, 0.015));
+    border-color: rgba(168, 85, 247, 0.30);
+    .taskButton {
+        h2 {
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+            text-decoration-color: rgba(236, 72, 153, 0.55);
+            opacity: 0.85;
+        }
+    }
+}
+
+.taskLeaving {
+    pointer-events: none;
+    animation: cardOut 180ms ease-in both;
+}
+
+.popupClosing {
+    animation: overlayOut 160ms ease-in both;
+}
+
+#Popup.popupClosing {
+    animation: popupOut 160ms ease-in both;
+}
+
+.popupCloseButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 34px;
+    width: 34px;
+    padding: 0;
+    border-radius: 999px;
+    border: 1px solid rgba(245, 243, 255, 0.14);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+}
+.popupCloseButton:hover {
+    border-color: rgba(236, 72, 153, 0.45);
+    box-shadow: 0 18px 48px rgba(236, 72, 153, 0.16);
+}
+
+@keyframes cardIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.99); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes cardOut {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(6px) scale(0.98); }
+}
+
+@keyframes overlayIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes overlayOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes popupIn {
+    from { opacity: 0; transform: translateY(10px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes popupOut {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(8px) scale(0.98); }
+}

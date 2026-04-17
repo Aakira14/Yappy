@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta content="Yappy - a simple local ToDoList" name="description">
+
+    <title>Yappy</title>
+    <link rel="icon" type="image/png" href="resources/gwp_logo_uni.png"/>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/native.css">
+    <link rel="stylesheet" href="styles/customClasses.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body onload="initLanding()">
+    <main class="authShell landingShell">
+        <div class="authCard landingCard">
+            <div class="brandRow">
+                <div class="brandMark" aria-hidden="true"></div>
+                <div class="brandName">Yappy</div>
+            </div>
+
+            <h1 class="landingTitle" aria-label="Yappy">
+                <span id="typeTarget" class="typeTarget"></span>
+                <span class="typeCaret" aria-hidden="true"></span>
+            </h1>
+            <p class="authHint">Your tasks, saved locally on this device.</p>
+
+            <div class="authActions">
+                <a class="buttonSelected authPrimary" href="login.html">Get started</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/landing.js"></script>
+</body>
+</html>

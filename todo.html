@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta content="Yappy - ToDoList" name="description">
+
+    <title>Yappy • ToDo</title>
+    <link rel="icon" type="image/png" href="resources/gwp_logo_uni.png"/>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/native.css">
+    <link rel="stylesheet" href="styles/customClasses.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/todo.css">
+</head>
+<body onload="Init()">
+    <header class="appHeader">
+        <div class="appHeaderInner">
+            <div class="appBrand">
+                <div class="brandMark" aria-hidden="true"></div>
+                <div class="appName">Yappy</div>
+            </div>
+            <div class="appRight">
+                <p id="greetingText" class="appGreeting"></p>
+                <button id="profileBtn" class="profileBtn" type="button" aria-haspopup="dialog" aria-expanded="false">
+                    <span class="profileDot" aria-hidden="true"></span>
+                    <span class="profileLabel">Profile</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="topControls">
+            <div class="leftControls">
+                <div id="filtersContainer"></div>
+                <button id="backToDatesBtn" type="button" class="ghostBtn" style="display:none;">Back</button>
+            </div>
+            <div class="centerControls">
+                <input id="dateSearch" type="search" placeholder="Search date (YYYY-MM-DD or DD/MM/YYYY)" autocomplete="off">
+            </div>
+            <div class="rightControls">
+                <p id="taskAmount">You have no task(s)...</p>
+                <button class="buttonSelected" onclick="newTaskOverlay()">Add a new task</button>
+            </div>
+        </section>
+        <ol id="listContainer"></ol>
+    </main>
+
+    <div id="drawerOverlay" class="drawerOverlay" data-open="false" aria-hidden="true"></div>
+    <aside id="profileDrawer" class="profileDrawer" data-open="false" aria-label="Profile" aria-hidden="true">
+        <div class="drawerHeader">
+            <div class="drawerTitle">Profile</div>
+            <button id="closeDrawerBtn" class="ghostBtn" type="button" aria-label="Close">×</button>
+        </div>
+        <div class="drawerBody">
+            <div class="drawerUser">
+                <div class="drawerAvatar" aria-hidden="true"></div>
+                <div class="drawerUserMeta">
+                    <div id="drawerUsername" class="drawerUsername"></div>
+                    <div id="drawerEmail" class="drawerEmail"></div>
+                </div>
+            </div>
+            <button id="logoutBtn" type="button" class="dangerBtn">Logout</button>
+        </div>
+    </aside>
+
+    <script src="scripts/Task.js"></script>
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/localStorage.js"></script>
+    <script src="scripts/interface.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta content="Login to Yappy" name="description">
+
+    <title>Login • Yappy</title>
+    <link rel="icon" type="image/png" href="resources/gwp_logo_uni.png"/>
+
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/native.css">
+    <link rel="stylesheet" href="styles/customClasses.css">
+    <link rel="stylesheet" href="styles/auth.css">
+</head>
+<body onload="initLoginPage()">
+    <main class="authShell">
+        <div class="authCard">
+            <div class="brandRow">
+                <div class="brandMark" aria-hidden="true"></div>
+                <div class="brandName">Yappy</div>
+            </div>
+
+            <h1 class="authTitle">Login</h1>
+            <p class="authHint">Welcome back. Password must be at least 6 characters.</p>
+
+            <div id="errorText" class="errorText" role="alert"></div>
+
+            <form class="authForm" id="loginForm">
+                <label class="fieldLabel">
+                    <span>Email</span>
+                    <input id="email" type="email" autocomplete="email" required>
+                </label>
+
+                <label class="fieldLabel">
+                    <span>Password</span>
+                    <div class="passwordWrap">
+                        <input id="password" type="password" autocomplete="current-password" minlength="6" required>
+                        <button class="togglePassword" id="togglePassword" type="button">Show</button>
+                    </div>
+                </label>
+
+                <div class="authActions">
+                    <button class="buttonSelected" type="submit">Login</button>
+                </div>
+            </form>
+
+            <div class="authLinks">
+                <a href="index.html">Back</a>
+                <a href="signup.html">Create account</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/auth.js"></script>
+    <script src="scripts/login.js"></script>
+</body>
+</html>
+

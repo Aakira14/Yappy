@@ -1,0 +1,28 @@
+:root {
+    /* Void theme */
+    --bg-0: rgb(6, 4, 14);
+    --bg-1: rgb(11, 6, 32);
+    --surface-0: rgba(16, 10, 32, 0.72);
+    --surface-1: rgba(24, 14, 50, 0.72);
+
+    --text: rgb(245, 243, 255);
+    --text-muted: rgba(245, 243, 255, 0.75);
+
+    --accent: rgb(168, 85, 247); /* purple */
+    --accent-2: rgb(124, 58, 237); /* deep purple */
+    --accent-3: rgb(236, 72, 153); /* magenta */
+
+    --danger: rgb(244, 63, 94);
+    --danger-soft: rgba(244, 63, 94, 0.35);
+
+    --border: rgba(245, 243, 255, 0.14);
+    --border-strong: rgba(168, 85, 247, 0.55);
+
+    --hover: rgba(168, 85, 247, 0.14);
+    --shadow: 0 18px 60px rgba(0, 0, 0, 0.55);
+
+    /* Back-compat with existing CSS selectors */
+    --color-main: var(--accent);
+    --color-hover: var(--hover);
+    --color-border-inactive: var(--border);
+}
